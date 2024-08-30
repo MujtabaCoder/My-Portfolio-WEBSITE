@@ -25,14 +25,29 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   typeEffect();
-  const randomColor = getRandomColor();
-  document.documentElement.style.setProperty("--main-bg-color", randomColor);
+
+  // const randomColor = getRandomColor();
+  // document.documentElement.style.setProperty("--main-bg-color", randomColor);
+
+  // const mainText = document.getElementById("mainText");
+  // const subText = document.getElementById("subText");
+
+  // mainText.setAttribute("fill", randomColor); // Set a new color for the main text
+  // subText.setAttribute("fill", randomColor);
 
   const mainText = document.getElementById("mainText");
   const subText = document.getElementById("subText");
 
-  mainText.setAttribute("fill", randomColor); // Set a new color for the main text
-  subText.setAttribute("fill", randomColor);
+  function changeColors() {
+    const newColor = getRandomColor();
+    document.documentElement.style.setProperty("--main-bg-color", newColor); // Change the background color
+  }
+
+  // Initial color change
+  changeColors();
+
+  // Change color every 5 seconds
+  setInterval(changeColors, 5000);
 });
 
 const hamMenuBtn = document.querySelector(".header__main-ham-menu-cont");
