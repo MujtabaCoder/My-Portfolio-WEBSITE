@@ -35,9 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // mainText.setAttribute("fill", randomColor); // Set a new color for the main text
   // subText.setAttribute("fill", randomColor);
 
-  const mainText = document.getElementById("mainText");
-  const subText = document.getElementById("subText");
-
   function changeColors() {
     const newColor = getRandomColor();
     document.documentElement.style.setProperty("--main-bg-color", newColor); // Change the background color
